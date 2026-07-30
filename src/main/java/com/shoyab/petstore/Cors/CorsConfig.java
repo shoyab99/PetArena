@@ -11,8 +11,12 @@ public class CorsConfig implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
 
         registry.addMapping("/**")
-                .allowedOrigins("http://localhost:5173",
-                        "https://pet-arena-09.vercel.app")
+        .allowedOrigins(
+        	    "http://localhost:5173",
+        	    "https://pet-arena-09.vercel.app",
+        	    "https://pet-arena-frontend-2-git-main-shoyab1.vercel.app",
+        	    "https://pet-arena-frontend-2-rglypiobz-shoyab1.vercel.app"
+        	)
                 .allowedMethods("GET","POST","PUT","PATCH","DELETE")
                 .allowedHeaders("*")
                 .allowCredentials(true);
